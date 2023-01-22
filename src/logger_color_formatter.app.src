@@ -1,5 +1,5 @@
 {application, logger_color_formatter,
- [{description, "An OTP library"},
+ [{description, "Simple log colouring for Erlang's logger"},
   {vsn, "0.1.0"},
   {registered, []},
   {applications,
