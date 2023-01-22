@@ -30,9 +30,7 @@ Simple log colouring for Erlang's logger.
                             ": ",
                             msg,
                             reset, "\n"
-                        ],
-                        legacy_header => false,
-                        single_line => true
+                        ]
                     }}
             }}
         ]}

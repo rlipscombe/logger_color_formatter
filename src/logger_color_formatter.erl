@@ -14,12 +14,15 @@ format(LogEvent = #{level := Level}, Config) ->
 update_config(_NoColor = false,
               Config = #{template := Template, colors := Colors},
               Level) ->
-    Config#{template =>
-                update_template(Template, maps:merge(default_colors(), Colors), Level)};
+    Config#{legacy_header => false,
+            single_line => true,
+            template => update_template(Template, maps:merge(default_colors(), Colors), Level)};
 update_config(_NoColor = false, Config = #{template := Template}, Level) ->
-    Config#{template => update_template(Template, default_colors(), Level)};
+    Config#{legacy_header => false,
+            single_line => true,
+            template => update_template(Template, default_colors(), Level)};
 update_config(_NoColor, Config, _Level) ->
-    Config.
+    Config#{legacy_header => false, single_line => true}.
 
 update_template(Template, Colors, Level) ->
     lists:map(fun (color) ->
