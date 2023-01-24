@@ -4,7 +4,7 @@ Simple log colouring for Erlang's logger.
 
 ## Dependency
 
-```
+```erlang
 {deps, [
   {logger_color_formatter,
     {git, "https://github.com/rlipscombe/logger_color_formatter.git", {tag, "0.4.0"}}}
@@ -13,7 +13,7 @@ Simple log colouring for Erlang's logger.
 
 ## Configuration
 
-```
+```erlang
 [
     {kernel, [
         {logger_level, debug},
@@ -40,7 +40,7 @@ Simple log colouring for Erlang's logger.
 
 ## Customisation
 
-```
+```erlang
 %...
 template => [...],
 colors =>
