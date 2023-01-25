@@ -44,4 +44,4 @@ default_colors() ->
       alert => "\e[1;44m",
       emergency => "\e[1;41m",
       % Not a colour, but this'll do.
-      reset => "\e0m"}.
+      reset => "\e[0m"}.
