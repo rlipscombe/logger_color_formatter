@@ -7,7 +7,7 @@ Simple log colouring for Erlang's logger.
 ```erlang
 {deps, [
   {logger_color_formatter,
-    {git, "https://github.com/rlipscombe/logger_color_formatter.git", {tag, "0.4.0"}}}
+    {git, "https://github.com/rlipscombe/logger_color_formatter.git", {tag, "0.5.0"}}}
 ]}.
 ```
 
