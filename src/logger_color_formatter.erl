@@ -23,23 +23,28 @@ update_config(_NoColor, Config, _Level) ->
     Config.
 
 update_template(Template, Colors, Level) ->
-    lists:map(fun (color) ->
-                      maps:get(Level, Colors);
-                  (reset) ->
-                      maps:get(reset, Colors);
-                  (Item) ->
-                      Item
-              end,
-              Template).
+    lists:map(
+        fun
+            (color) ->
+                maps:get(Level, Colors);
+            (reset) ->
+                maps:get(reset, Colors);
+            (Item) ->
+                Item
+        end,
+        Template
+    ).
 
 default_colors() ->
-    #{debug => "\e[0;38m",
-      info => "\e[1;37m",
-      notice => "\e[1;36m",
-      warning => "\e[1;33m",
-      error => "\e[1;31m",
-      critical => "\e[1;35m",
-      alert => "\e[1;44m",
-      emergency => "\e[1;41m",
-      % Not a colour, but this'll do.
-      reset => "\e[0m"}.
+    #{
+        debug => "\e[0;38m",
+        info => "\e[1;37m",
+        notice => "\e[1;36m",
+        warning => "\e[1;33m",
+        error => "\e[1;31m",
+        critical => "\e[1;35m",
+        alert => "\e[1;44m",
+        emergency => "\e[1;41m",
+        % Not a colour, but this'll do.
+        reset => "\e[0m"
+    }.
