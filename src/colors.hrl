@@ -1,6 +1,12 @@
 -define(SGR(X), "\e[" X "m").
 
+-define(NORMAL_RED, ?SGR("0;31")).
+-define(NORMAL_GREEN, ?SGR("0;32")).
+-define(NORMAL_YELLOW, ?SGR("0;33")).
+-define(NORMAL_BLUE, ?SGR("0;34")).
+-define(NORMAL_MAGENTA, ?SGR("0;35")).
 -define(NORMAL_CYAN, ?SGR("0;36")).
+-define(NORMAL_WHITE, ?SGR("0;37")).
 
 -define(BOLD_RED, ?SGR("1;31")).
 -define(BOLD_GREEN, ?SGR("1;32")).

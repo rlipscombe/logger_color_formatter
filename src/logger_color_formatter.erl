@@ -37,15 +37,16 @@ update_template(Template, Colors, Level) ->
     ).
 
 default_colors() ->
+    % Same default colors as Elixir logger.
     #{
         debug => ?NORMAL_CYAN,
-        info => ?BOLD_WHITE,
-        notice => ?BOLD_CYAN,
-        warning => ?BOLD_YELLOW,
-        error => ?BOLD_RED,
-        critical => ?BOLD_MAGENTA,
-        alert => ?BOLD_BLUE,
-        emergency => ?BOLD_RED,
+        info => ?NORMAL_WHITE,
+        notice => ?NORMAL_WHITE,
+        warning => ?NORMAL_YELLOW,
+        error => ?NORMAL_RED,
+        critical => ?NORMAL_RED,
+        alert => ?NORMAL_RED,
+        emergency => ?NORMAL_RED,
 
         % Not a color.
         reset => ?RESET
