@@ -11,18 +11,16 @@ format(LogEvent = #{level := Level}, Config) ->
     Config2 = update_config(os:getenv("NO_COLOR"), Config, Level),
     ?DEFAULT_FORMATTER:format(LogEvent, Config2).
 
-update_config(_NoColor = false,
-              Config = #{template := Template, colors := Colors},
-              Level) ->
-    Config#{legacy_header => false,
-            single_line => true,
-            template => update_template(Template, maps:merge(default_colors(), Colors), Level)};
+update_config(
+    _NoColor = false,
+    Config = #{template := Template, colors := Colors},
+    Level
+) ->
+    Config#{template => update_template(Template, maps:merge(default_colors(), Colors), Level)};
 update_config(_NoColor = false, Config = #{template := Template}, Level) ->
-    Config#{legacy_header => false,
-            single_line => true,
-            template => update_template(Template, default_colors(), Level)};
+    Config#{template => update_template(Template, default_colors(), Level)};
 update_config(_NoColor, Config, _Level) ->
-    Config#{legacy_header => false, single_line => true}.
+    Config.
 
 update_template(Template, Colors, Level) ->
     lists:map(fun (color) ->
