@@ -1,5 +1,5 @@
 {application, logger_color_formatter,
- [{description, "Simple log colouring for Erlang's logger"},
+ [{description, "Simple log coloring for Erlang's logger"},
   {vsn, "0.4.0"},
   {registered, []},
   {applications,

@@ -46,6 +46,7 @@ default_colors() ->
         critical => ?BOLD_MAGENTA,
         alert => ?BOLD_BLUE,
         emergency => ?BOLD_RED,
-        % Not a colour, but this'll do.
+
+        % Not a color.
         reset => ?RESET
     }.

@@ -1,6 +1,6 @@
 # logger_color_formatter
 
-Simple log colouring for Erlang's logger.
+Simple log coloring for Erlang's logger.
 
 ## Dependency
 
