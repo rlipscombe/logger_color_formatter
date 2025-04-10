@@ -1,4 +1,5 @@
 -module(logger_color_formatter).
+-include("colors.hrl").
 
 -export([config_check/1, format/2]).
 
@@ -37,14 +38,14 @@ update_template(Template, Colors, Level) ->
 
 default_colors() ->
     #{
-        debug => "\e[0;38m",
-        info => "\e[1;37m",
-        notice => "\e[1;36m",
-        warning => "\e[1;33m",
-        error => "\e[1;31m",
-        critical => "\e[1;35m",
-        alert => "\e[1;44m",
-        emergency => "\e[1;41m",
+        debug => ?NORMAL_CYAN,
+        info => ?BOLD_WHITE,
+        notice => ?BOLD_CYAN,
+        warning => ?BOLD_YELLOW,
+        error => ?BOLD_RED,
+        critical => ?BOLD_MAGENTA,
+        alert => ?BOLD_BLUE,
+        emergency => ?BOLD_RED,
         % Not a colour, but this'll do.
-        reset => "\e[0m"
+        reset => ?RESET
     }.
