@@ -1,7 +1,10 @@
 -module(logger_color_formatter).
 -include("colors.hrl").
 
--export([config_check/1, format/2]).
+-export([
+    config_check/1,
+    format/2
+]).
 
 -define(DEFAULT_FORMATTER, logger_formatter).
 
