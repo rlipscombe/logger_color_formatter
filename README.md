@@ -66,3 +66,27 @@ colors =>
     }
 %...
 ```
+
+Or, if you prefer lager's original colors, which uses `\e[1m` for bold text:
+
+```erlang
+%...
+template => [...],
+colors =>
+    #{
+        debug => "\e[0;97m",
+        info => "\e[1;37m",
+        notice => "\e[1;36m",
+        warning => "\e[1;33m",
+        error => "\e[1;31m",
+        critical => "\e[1;35m",
+        alert => "\e[1;44m",
+        emergency => "\e[1;31m",
+
+        reset => "\e[0m"
+    }
+%...
+```
+
+Note: lager uses `\e[0;38m` for `debug`, which isn't (afaict) a valid color code. It comes out (on my terminal) as
+bright white, which is documented as `\e[0;97m`, so I've used that instead.
